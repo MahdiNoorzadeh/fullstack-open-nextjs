@@ -1,13 +1,25 @@
-export default async function NotePage({ params }) {
+import { notes } from "@/data/notes";
+
+export default async function CultureNotePage({ params }) {
   const { id } = await params;
+
+  const note = notes.find(
+    (note) => note.id === Number(id)
+  );
+
+  if (!note) {
+    return (
+      <main>
+        <h1>Note not found</h1>
+      </main>
+    );
+  }
 
   return (
     <main>
-      <h1>Note for our culture team work {id}</h1>
-
-      <p>
-        This is a dynamic route example.
-      </p>
+      <h1>{note.title}</h1>
+      <p>{note.content}</p>
+      <p>Category: {note.category}</p>
     </main>
   );
 }
