@@ -6,6 +6,7 @@ export default function Header() {
       <h1>Full Stack Open Next.js</h1>
       <nav>
         <Link href="/">Home</Link>
+        <Link href="/about">About</Link>
       </nav>
     </header>
   );
