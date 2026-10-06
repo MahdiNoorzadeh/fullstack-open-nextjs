@@ -1,9 +1,12 @@
+import Header from "@/components/Header";
+
 export default function Home() {
   return (
     <main>
-      <h1>Full Stack Open Next.js</h1>
+      <Header />
+
       <p>
-      Next.js application for the Full Stack Open course.
+       Next.js application for the Full Stack Open course.
       </p>
     </main>
   );
