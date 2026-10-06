@@ -1,9 +1,11 @@
-export default function About() {
+export default async function CultureNotePage({ params }) {
+  const { id } = await params;
+
   return (
     <main>
-      <h1>About</h1>
+      <h1>Culture Note {id}</h1>
       <p>
-        This project is part of the Full Stack Open Next.js course.
+        This is a dynamic culture note.
       </p>
     </main>
   );
